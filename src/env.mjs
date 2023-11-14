@@ -42,6 +42,7 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_SHOW_DOCUMENTATION_LINK_FLAG: z.string(),
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: z.string(),
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
   },
 
@@ -60,6 +61,7 @@ export const env = createEnv({
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     NEXT_PUBLIC_SHOW_DOCUMENTATION_LINK_FLAG:
       process.env.NEXT_PUBLIC_SHOW_DOCUMENTATION_LINK_FLAG,
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
