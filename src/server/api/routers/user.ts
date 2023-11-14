@@ -8,8 +8,9 @@ import {
 
 export const userRouter = createTRPCRouter({
   getUser: protectedProcedure.query(async ({ ctx }) => {
-    // simulate a slow db call
-
+    if (!ctx.session.user) {
+      return undefined;
+    }
     return ctx.db.user.findUnique({
       where: {
         id: ctx.session.user.id,
